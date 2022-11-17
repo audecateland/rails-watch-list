@@ -6,6 +6,7 @@ ruby "3.1.2"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
+gem "faker"
 # gem "sassc-rails"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

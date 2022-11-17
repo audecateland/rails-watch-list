@@ -1,0 +1,10 @@
+<h1>My lists</h1>
+<div class=container>
+  <div class=card-category>
+   <% @list.bookmark.each do |bookmark| %>
+   <%= bookmark.movie.title %>
+   <%= bookmark.movie.overview %>
+   <%= end %>
+  </div>
+  <h2 class="btn btn-primary">Add a movie</h2>
+</div>
