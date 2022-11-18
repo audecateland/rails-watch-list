@@ -1,10 +1,23 @@
-<h1>My lists</h1>
-<div class=container>
-  <div class=card-category>
-   <% @list.bookmark.each do |bookmark| %>
-   <%= bookmark.movie.title %>
-   <%= bookmark.movie.overview %>
-   <%= end %>
+<div class="container">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('cinema_seats.png') %>">
+    <h1>Save any kind of movies</h1>
   </div>
-  <h2 class="btn btn-primary">Add a movie</h2>
+
+  <div>
+    <h3>My lists</h3>
+    <%= link_to "Add a movie list", new_list_path, class: "btn btn-flat" %>
+  </div>
+
+  <div class="row">
+    <% @lists.each do |list| %>
+    <div class="co-12 col-sm-6 col-md-4 mb-3">
+      <%= link_to list_path(list), class:"text-decoration-none" do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('bobine.png') %>)">
+            <%= list.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
 </div>
